@@ -725,25 +725,7 @@ public class Jogo {
             }            
         }
     }
-    /**
-    * Verifica se algum jogador dominou todas as regiões, caso sim, parabeniza o jogador e encerra o jogo
-    * 
-    * @param return
-    */
-    private boolean fimDeJogo(){
     
-        for(int x = 0; x < n_jogadores;x++){
-            for(int y =0; y < regioes.length; y++){
-                if(!isDominada(regioes[y],jogadores[x])){
-                    break;
-                }else if(y==regioes.length-1){
-                    System.out.println("Parabéns, "+jogadores[x]+"!! Voçê venceu o jogo");
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
     /**
     * Dar uma carta a um jogador
     * 
