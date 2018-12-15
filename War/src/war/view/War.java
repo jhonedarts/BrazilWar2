@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package war;
+package war.view;
 
 /**
  * Classe principal, responsável por criar, especificar qual versão do jogo será utilizada e execultar a chamada para inicio do jogo
@@ -19,9 +19,6 @@ public class War {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Jogo jogo = Jogo.getInstance();
-        jogo.setWar1();
-        jogo.iniciarJogo();
     
     }
 
