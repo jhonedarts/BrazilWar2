@@ -1,17 +1,19 @@
-necessidade de criar classe mapa para tirar a funcao de criar o mapa de jogo;
-necessidade de tirar a definicao de territorios de "jogo" e por em uma classe parametros, poderia ser um json externo, com isso as classes fronteiras e regioes foram deletadas;
-muita responsabilidade, classe combate dá cartas aos jogadores e verifica se atingiram o limite de cartas na mao;
-Não houve necessidade do padrao strategy, criou-se o medoto combateAereo;
-padrao mvc utilizado para com principal objetivo de separar GUI do restante;
-entidade trocador foi criada retirando essa responsabilidade da classe jogo;
-
+- necessidade de criar classe mapa para tirar a funcao de criar o mapa de jogo;
+- necessidade de tirar a definicao de territorios de "jogo" e por em uma classe parametros, poderia ser um json externo, com 	isso as classes fronteiras e regioes foram deletadas;
+- muita responsabilidade, classe combate dá cartas aos jogadores e verifica se atingiram o limite de cartas na mao;
+- Não houve necessidade do padrao strategy, criou-se o medoto combateAereo;
+- padrao mvc utilizado para com principal objetivo de separar GUI do restante;
+- entidade trocador foi criada retirando essa responsabilidade da classe jogo;
+- combateAereo, ataca qualquer estado exceto o seu. possui regras proprias de combate
 
 falta:
-combateAereo
-modificar a geracao de tropas por rodada pra ganhar avioes
-adicionar opcao de ataque aereo e ataque aereo usando cartas no menu
+modificar a geracao de tropas por rodada pra ganhar avioes (1 por 5 territorios, eu que inventei)
+adicionar opcao de ataque aereo (se tiver avioes) e ataque aereo usando cartas no menu, gasta 1 carta, ganha 1 aviao
 interface
 
 talvez:
 ganhar 3 cartas por territorio conquistado
-algumas cartas possuirem numero que definem quantos soldados ela vale
+
+rejeitado:
+estados como centros estrategicos ou especiais
+mudanca nas cartas (algumas cartas possuirem numero que definem quantos soldados ela vale)

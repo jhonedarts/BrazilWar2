@@ -16,11 +16,11 @@ import java.util.HashMap;
 public class ParametrosWar2 extends Parametros{
     private static ParametrosWar2 instance;
     
-    private String north[] = {"AC", "AP", "AM", "PA", "RO", "RR"};
-    private String northeast[] = {"AL", "BA", "CE", "MA", "PB", "PE", "PI", "RN", "SE"};
-    private String midest[] = {"GO", "MT", "MS", "TO"};
-    private String southeast[] = {"ES", "MG", "SP", "RJ"};
-    private String south[] = {"PR", "RS", "SC"};
+    private final String north[] = {"AC", "AP", "AM", "PA", "RO", "RR"};
+    private final String northeast[] = {"AL", "BA", "CE", "MA", "PB", "PE", "PI", "RN", "SE"};
+    private final String midest[] = {"GO", "MT", "MS", "TO"};
+    private final String southeast[] = {"ES", "MG", "SP", "RJ"};
+    private final String south[] = {"PR", "RS", "SC"};
     
     private HashMap<String, String[]> frontiers;
     
@@ -38,7 +38,7 @@ public class ParametrosWar2 extends Parametros{
     }
     
     private void initEstados() {
-        ArrayList<String> N = new ArrayList<String>(Arrays.asList(north));
+        ArrayList<String> N = new ArrayList<>(Arrays.asList(north));
         ArrayList<String> NE = new ArrayList<>(Arrays.asList(northeast));
         ArrayList<String> MW = new ArrayList<>(Arrays.asList(midest));
         ArrayList<String> SE = new ArrayList<>(Arrays.asList(southeast));

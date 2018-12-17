@@ -72,25 +72,21 @@ public class CampoDeBatalha {
     
     public int[] combateAereo(int atacante, int defensor){
         int derrotados[] = {0, 0}; //[atacante, defensor]
-        int dadosVermelhos[] = {0, 0, 0}; //vetor com os valores de 3 dados
-        int dadosAmarelos[] = {0, 0, 0}; //inicializo com 0 pq é um valor fora do range
+        int dadoAtaque = numberGenerator.nextInt(6)+1;
+        int dadoDefesa = numberGenerator.nextInt(6)+1; 
         
-               
-        //nao sei como funciona a questao dos dados no war 2
-        
-        Arrays.sort(dadosVermelhos);
-        Arrays.sort(dadosAmarelos);
-        
-        for (int i = 0; i < dadosVermelhos.length; i++) {
-            if(dadosVermelhos[i] != 0 && dadosAmarelos[i] != 0){
-                if (dadosVermelhos[i] <= dadosAmarelos[i]){
-                    derrotados[0]++;//red defeat
-                } else {
-                    derrotados[1]++;//yellow defeat
-                }
+        if(dadoDefesa > 3){
+            derrotados[0] = dadoDefesa -3;
+            if(derrotados[0] > atacante){//poder mais do que suficiente pra derrubar tudo
+                derrotados[0] = atacante;
             }
         }
-        
+        if(dadoAtaque > 3){
+            derrotados[1] = dadoAtaque -3;
+            if(derrotados[1] > defensor){//poder mais do que suficiente pra derrubar tudo
+                derrotados[1] = defensor;
+            }
+        }
         return derrotados;
     }
     
