@@ -32,6 +32,7 @@ public class Jogador {
         estados = new ArrayList();
         cartas = new ArrayList();
         this.soldadosParaDistribuir = 0;
+        this.soldadosParaDistribuirPorRegiao = new HashMap<>();
         this.avioes = 0;
         for (String regiao : parametros.getRegioes()){
             soldadosParaDistribuirPorRegiao.put(regiao, 0);
@@ -228,7 +229,9 @@ public class Jogador {
     }
     
     public void removeAvioes(int units){
-        this.avioes -= units;        
+        this.avioes -= units;  
+        if(this.avioes < 0)
+            this.avioes = 0;
     }
     
     /**

@@ -44,6 +44,10 @@ public class Trocador {
         return units;
     }
     
+    public int getTradeAirplane(Carta carta){        
+        return 1;
+    }
+    
     /**
      * checa se as cartas recebidas são uma troca valida
      * @param cartas

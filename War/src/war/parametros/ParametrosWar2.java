@@ -28,6 +28,7 @@ public class ParametrosWar2 extends Parametros{
         initFronteiras();
         initEstadosPorRegiao();
         initEstados();//deve seguir initEstadosPorRegiao()
+        versao = 2;
     }
     
     public static ParametrosWar2 getInstance(){

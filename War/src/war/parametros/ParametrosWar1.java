@@ -28,6 +28,7 @@ public class ParametrosWar1 extends Parametros{
         initFronteiras();
         initEstadosPorRegiao();
         initEstados();//deve seguir initEstadosPorRegiao()
+        versao = 1;
     }
     
     public static ParametrosWar1 getInstance(){
@@ -44,7 +45,7 @@ public class ParametrosWar1 extends Parametros{
         ArrayList<String> SE = new ArrayList<>(Arrays.asList(southeast));
         ArrayList<String> S = new ArrayList<>(Arrays.asList(south));
         
-        this.states = new ArrayList<>();
+        this.states = new ArrayList<String>();
         states.addAll(N);
         states.addAll(NE);
         states.addAll(MW);

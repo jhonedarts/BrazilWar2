@@ -19,17 +19,23 @@ public class Jogo {
     private Parametros parametros = Parametros.getInstance();
     private CampoDeBatalha campoDeBatalha;
     private Deck deck;
-    private Mapa mapa;
+    private Mapa mapa = Mapa.getInstance();
     private Trocador trocador;
     private ArrayList<Jogador> jogadores;
+    private static Jogo instance = null;
+    
+    public static Jogo getInstance(){
+        if(instance == null)
+            instance = new Jogo();
+        return instance;
+    }
     
     /**
      * inicializa os componentes principais do jogo war 1
      */
-    public Jogo() {
+    private Jogo() {
         campoDeBatalha = new CampoDeBatalha();
         deck = new Deck();
-        mapa = new Mapa();
         trocador = Trocador.getInstance();
         jogadores = new ArrayList<>();
     }
@@ -37,7 +43,17 @@ public class Jogo {
     /**
      * Inicia e sortea o mapaa para os jogadores
      */
-    public void startGame() {
+    public void startGame(int jogadoresQtd) {
+        ArrayList<Jogador> jogadoress = new ArrayList<>();
+        jogadoress.add(new Jogador("blue"));
+        jogadoress.add(new Jogador("green"));
+        jogadoress.add(new Jogador("red"));
+        jogadoress.add(new Jogador("yellow"));
+        jogadoress.add(new Jogador("white"));
+        jogadoress.add(new Jogador("black"));
+        for (int i = 0; i < jogadoresQtd; i++) {
+            jogadores.add(jogadoress.get(i));
+        }
         mapa.shuffleMap(jogadores);
     }
     

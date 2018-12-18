@@ -16,6 +16,7 @@ public abstract class Parametros {
     protected HashMap<String, String[]> regions;
     protected ArrayList<String> states;
     protected HashMap<String, String[]> frontiers;
+    protected int versao = 0;
     private static Parametros parameters;
     
     private final String jokerSimbolo = "CORINGA";
@@ -37,12 +38,15 @@ public abstract class Parametros {
         return parameters;
     }
     
+    public int getVersao(){
+        return versao;
+    }
     /**
      * 
      * @return a colecao de siglas de todos estados
      */
-    public String[] getEstados() {
-        return (String[]) this.states.toArray();
+    public ArrayList<String> getEstados() {
+        return this.states;
     }
     
     /**

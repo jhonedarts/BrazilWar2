@@ -18,8 +18,17 @@ import war.parametros.Parametros;
  */
 public class Mapa {
     private HashMap<String, Estado> estados;
-    private Parametros parametros = Parametros.getInstance(1);
-    public Mapa() {
+    private Parametros parametros = null;
+    private static Mapa instance = null;
+    
+    public static Mapa getInstance(){
+        if(instance == null)
+            instance = new Mapa();
+        return instance;
+    }
+    
+    private Mapa() {
+        parametros = Parametros.getInstance();
         this.estados = new HashMap<>();
         //inicializa com todos estados definidos em STATES 
         for (int i = 0; i < parametros.getEstadosTotal(); i++) {
@@ -215,6 +224,7 @@ public class Mapa {
                 continue;
             }
             int prefix = counters.get(key)%2;
+            jogador.addAvioes(counters.get(key)%5);
             int deleteRows = prefix - counters.get(key);
             for (int i=0; i<deleteRows; i++){
                 counters.replace(key, counters.get(key)-prefix + i);

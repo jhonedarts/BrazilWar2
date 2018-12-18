@@ -4,16 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/Users/jhone/Documents/GitHub/BrazilWar2/War/src/war/parametros/ParametrosWar2.java</file>
-            <file>file:/E:/Users/jhone/Documents/GitHub/BrazilWar2/War/src/war/controller/Trocador.java</file>
-            <file>file:/E:/Users/jhone/Documents/GitHub/BrazilWar2/War/src/war/view/War.java</file>
-            <file>file:/E:/Users/jhone/Documents/GitHub/BrazilWar2/War/src/war/models/Estado.java</file>
-            <file>file:/E:/Users/jhone/Documents/GitHub/BrazilWar2/War/src/war/models/Carta.java</file>
-            <file>file:/E:/Users/jhone/Documents/GitHub/BrazilWar2/War/src/war/models/Deck.java</file>
             <file>file:/E:/Users/jhone/Documents/GitHub/BrazilWar2/War/src/war/controller/Jogo.java</file>
             <file>file:/E:/Users/jhone/Documents/GitHub/BrazilWar2/War/src/war/controller/Mapa.java</file>
             <file>file:/E:/Users/jhone/Documents/GitHub/BrazilWar2/War/src/war/parametros/ParametrosWar1.java</file>
-            <file>file:/E:/Users/jhone/Documents/GitHub/BrazilWar2/War/src/war/models/Jogador.java</file>
-            <file>file:/E:/Users/jhone/Documents/GitHub/BrazilWar2/War/src/war/controller/CampoDeBatalha.java</file>
+            <file>file:/E:/Users/jhone/Documents/GitHub/BrazilWar2/War/src/war/view/Main.java</file>
             <file>file:/E:/Users/jhone/Documents/GitHub/BrazilWar2/War/src/war/parametros/Parametros.java</file>
         </group>
     </open-files>
